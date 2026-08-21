@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>塔罗抽牌 + Yes/No 神谕</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>塔罗抽牌 + Yes/No 神谕</h1>
+    <p class="sub">同一天、同问题、同模式结果固定（本地离线运行）。</p>
+
+    <section class="card">
+      <label for="question">你的问题（可选）</label>
+      <input id="question" type="text" placeholder="你想问什么？（可选）" />
+
+      <label for="mode">模式</label>
+      <select id="mode">
+        <option value="tarot-single">塔罗单张</option>
+        <option value="tarot-three">塔罗三张（过去-现在-未来）</option>
+        <option value="yesno">Yes/No 神谕</option>
+        <option value="yesno-tarot">Yes/No + 塔罗解释</option>
+      </select>
+
+      <button id="startBtn">开始占卜</button>
+    </section>
+
+    <section id="result" class="card">
+      <p class="muted">填写问题（可选），选择模式，然后点击“开始占卜”。</p>
+    </section>
+
+    <section class="card">
+      <div class="history-head">
+        <h2>历史记录</h2>
+        <button id="clearHistoryBtn" class="danger">清空全部</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <p class="disclaimer">仅供娱乐与自我反思，不构成专业建议。</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
